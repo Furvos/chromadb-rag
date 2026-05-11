@@ -1,0 +1,4 @@
+# Sobre os parâmetros M e ef_construction
+(M é escrito max_neighbors nos parâmetros do chroma)
+
+No HNSW, os hiperparâmetros M e ef_construction aumentam o consumo de memória RAM porque o algoritmo armazena um grafo de conexões entre vetores. O parâmetro M possui maior impacto, pois define quantos vizinhos cada vetor mantém em memória, enquanto ef_construction aumenta o custo e a complexidade da construção do índice. Em comparação, uma busca KNN exata geralmente consome menos RAM estruturalmente, pois armazena apenas os vetores, mas realiza buscas muito mais lentas por comparar a consulta com praticamente toda a base de dados.
