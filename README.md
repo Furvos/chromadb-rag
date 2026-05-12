@@ -42,4 +42,4 @@ Neste projeto, o ChromaDB é responsável por:
 6. Re-ranking com Cross-Encoder.
 7. Seleção dos Top-3 documentos finais.
 
-**Este arquivo README.md foi parcialmente gerado usando IA generativa. A **
+**Este arquivo README.md foi parcialmente gerado usando IA generativa.**
