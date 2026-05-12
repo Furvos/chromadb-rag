@@ -1,19 +1,5 @@
-from chromadb.utils.embedding_functions import DefaultEmbeddingFunction
 from llm_document import gerar_documento_hipotetico
-import chromadb
-
-chroma_client = chromadb.Client()
-collection = chroma_client.get_or_create_collection(
-    name="direito_constitucional",
-    embedding_function=DefaultEmbeddingFunction(),
-    configuration={
-        "hnsw": {
-            "space": "cosine",
-            "max_neighbors": 16,
-            "ef_construction": 200,
-        }
-    }
-)
+from collection_config import collection
 
 collection.add(
     ids=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", 
@@ -46,7 +32,7 @@ collection.add(
         "O princípio da proporcionalidade é utilizado na interpretação constitucional para solução de conflitos entre direitos fundamentais.",
         "A competência originária do Supremo Tribunal Federal inclui o julgamento de ações contra atos do Congresso Nacional em determinadas hipóteses."
     ],
-    metadatas=[{"tema": "direito constitucional"}]
+    metadatas=[{"tema": "direito constitucional"}] * 25
 )
 
 print("== Collection do chromadb: ==")
